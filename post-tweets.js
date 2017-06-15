@@ -35,7 +35,7 @@ function getIndex(done) {
 }
 
 function storeWord(word, done) {
-  theWord = word;
+  theWord = word + '-industrial complex';
   callNextTick(done, null, word);
 }
 
