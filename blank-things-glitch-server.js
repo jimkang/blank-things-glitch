@@ -1,8 +1,9 @@
 /* global process */
 
 var Twit = require('twit');
-var Masto = require('masto');
+var Masto = require('mastodon');
 var getWord = require('./get-word');
+var wakeupServer = require('./wakeup-server');
 
 var mastodon;
 var twit;
@@ -24,6 +25,9 @@ if (process.env.MASTODON_ACCESS_TOKEN) {
   });
   setInterval(postToot, 60 * 60 * 1000);
 }
+
+wakeupServer.listen(process.env.PORT);
+console.log('Started.');
 
 function getPhrase(word) {
   var capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);

@@ -4,7 +4,7 @@
   "description": "An everyword-style bot that runs on Glitch.",
   "main": "blank-things-glitch-server.js",
   "scripts": {
-    "test": "make test"
+    "start": "node blank-things-glitch-server.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,9 @@
     "canonicalizer": "^1.0.2",
     "mastodon": "^1.2.0",
     "standard-bail": "^2.0.1",
-    "twit": "^2.2.5",
-    "wordnok": "^3.3.1"
+    "twit": "^2.2.6",
+    "wordnok": "^3.3.1",
+    "request": "^2.81.0",
+    "express": "^4.15.3"
   }
 }
