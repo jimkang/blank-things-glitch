@@ -31,6 +31,7 @@ To make your own @<something>_things bot:
         TWITTER_ACCESS_TOKEN=<your twitter access token>
         TWITTER_ACCESS_TOKEN_SECRET=<your twitter access token secret>
 
+- Edit the `ping` function in `wakeup-server.js` to hit `https://<your Glitch project name>.glitch.me/`. (This is the part of the app that hits an http endpoint periodically so that Glitch doesn't shut the app down.)
 - Edit the part of `blank-things-server.js` that creates a phrase from the random noun, then `getPhrase` function:
 
         function getPhrase(word) {
