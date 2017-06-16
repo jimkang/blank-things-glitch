@@ -7,43 +7,42 @@ Installation
 ------------
 
 To make your own @<something>_things bot:
-
 - `Remix` this repo on Glitch.
 - [Get a Wordnik API key.](http://developer.wordnik.com/#!/faq)
 - Add the following line to your `.env` file:
 
-    WORDNIK_KEY=<Your Wordnik API key>
+    `WORDNIK_KEY=<Your Wordnik API key>`
 
 - If it's going to be on Mastodon:
   - Create a new Mastodon account.
   - Use [Darius Kazemi's Mastodon registration tool](https://tinysubversions.com/notes/mastodon-bot/) to get a Mastodon access token.
   - Add the following lines to your `.env` file:
 
-    MASTODON_ACCESS_TOKEN=<your Mastodon access token>
-    MASTODON_API_URL="https://<your Mastodon instance>/api/v1/" (e.g. https://botsin.space/api/v1/)
+        MASTODON_ACCESS_TOKEN=<your Mastodon access token>
+        MASTODON_API_URL=https://<your Mastodon instance>/api/v1/ (e.g. https://botsin.space/api/v1/)
 
 - If it's going to be on Twitter:
   - Create a new Twitter account.
   - Use either [Twitter dev web site](https://gist.github.com/jimkang/34d16247b40097d8cace) or [v21's OAuth dance app](http://v21.io/iwilldancetheoauthdanceforyou/) or, if you know what it is, [use twurl](https://gist.github.com/jimkang/873c2434cb893baa3675) to get a Twitter consumer key, consumer secret, access token, and access token secret.
   - Add the following lines to your `.env` file:
 
-    TWITTER_CONSUMER_KEY=<your twitter consumer key>
-    TWITTER_CONSUMER_SECRET=<your twitter consumer secret>
-    TWITTER_ACCESS_TOKEN=<your twitter access token>
-    TWITTER_ACCESS_TOKEN_SECRET=<your twitter access token secret>
+        TWITTER_CONSUMER_KEY=<your twitter consumer key>
+        TWITTER_CONSUMER_SECRET=<your twitter consumer secret>
+        TWITTER_ACCESS_TOKEN=<your twitter access token>
+        TWITTER_ACCESS_TOKEN_SECRET=<your twitter access token secret>
 
 - Edit the part of `blank-things-server.js` that creates a phrase from the random noun, then `getPhrase` function:
 
-    function getPhrase(word) {
-      var capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
-      return capitalizedWord + '-Industrial Complex';
-    }
+        function getPhrase(word) {
+          var capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+          return capitalizedWord + '-Industrial Complex';
+        }
 
   e.g. If you wanted to make a "weird <thing>" bot, you could change it to:
 
-    function getPhrase(word) {
-      return 'weird ' + word;
-    }
+        function getPhrase(word) {
+          return 'weird ' + word;
+        }
 
   And it would post things like 'weird doctors and 'weird abdicator`.
 
