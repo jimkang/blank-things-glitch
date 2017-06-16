@@ -4,6 +4,7 @@ var Twit = require('twit');
 var Masto = require('mastodon');
 var getWord = require('./get-word');
 var wakeupServer = require('./wakeup-server');
+var toTitleCase = require('titlecase');
 
 var mastodon;
 var twit;
@@ -30,7 +31,7 @@ wakeupServer.listen(process.env.PORT);
 console.log('Started.');
 
 function getPhrase(word) {
-  var capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+  var capitalizedWord = toTitleCase(word);
   return capitalizedWord + '-Industrial Complex';
 }
 
