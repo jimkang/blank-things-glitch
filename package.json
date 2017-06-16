@@ -1,37 +1,31 @@
 {
-  "name": "everyword-glitch",
+  "name": "blank-things-glitch",
   "version": "1.0.0",
   "description": "An everyword-style bot that runs on Glitch.",
-  "main": "index.js",
+  "main": "blank-things-glitch-server.js",
   "scripts": {
     "test": "make test"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jimkang/everyword-glitch.git"
+    "url": "git@github.com:jimkang/blank-things-glitch.git"
   },
   "keywords": [],
   "author": "Jim Kang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jimkang/everyword-glitch/issues"
+    "url": "https://github.com/jimkang/blank-things-glitch/issues"
   },
-  "homepage": "https://github.com/jimkang/everyword-glitch",
+  "homepage": "https://github.com/jimkang/blank-things-glitch",
   "devDependencies": {
     "tape": "^3.0.3"
   },
   "dependencies": {
-    "async": "^2.4.1",
     "call-next-tick": "^2.0.1",
-    "d3-queue": "^3.0.7",
-    "get-file-line-offsets-in-json": "^1.0.2",
-    "google-images": "^0.1.2",
-    "instant-bot": "0.0.18",
-    "jsonfile": "^2.2.3",
-    "line-chomper": "^0.5.0",
-    "lodash.pluck": "^3.1.2",
-    "pick-first-good-url": "^2.0.0",
-    "probable": "^2.1.1",
-    "twit": "^1.1.20"
+    "canonicalizer": "^1.0.2",
+    "mastodon": "^1.2.0",
+    "standard-bail": "^2.0.1",
+    "twit": "^2.2.5",
+    "wordnok": "^3.3.1"
   }
 }
