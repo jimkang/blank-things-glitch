@@ -1,7 +1,7 @@
 blank-things-glitch
 ==================
 
-A bot in the style of @ghost_things that runs on Glitch. That is, it gets a random noun, then makes a phrase (like ghost <noun>), then posts it.
+A bot in the style of [@ghost_things](https://twitter.com/ghost_things) that runs on Glitch. That is, it gets a random noun, then makes a phrase (like ghost <noun>), then posts it.
 
 Installation
 ------------
