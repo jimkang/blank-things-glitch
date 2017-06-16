@@ -21,7 +21,7 @@ if (process.env.TWITTER_ACCESS_TOKEN) {
 if (process.env.MASTODON_ACCESS_TOKEN) {
   mastodon = new Masto({
     access_token: process.env.MASTODON_ACCESS_TOKEN,
-    api_url: 'https://botsin.space/api/v1/'
+    api_url: process.env.MASTODON_API_URL
   });
   setInterval(postToot, 60 * 60 * 1000);
 }
